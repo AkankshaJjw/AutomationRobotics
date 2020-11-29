@@ -8,7 +8,7 @@ if video_flag
     figure;
     %pause;
     myVideo = VideoWriter('Q3Part1Animation.mp4', 'MPEG-4');
-    myVideo.FrameRate = 50;
+    myVideo.FrameRate = 20;
     myVideo.Quality = 100;
     open(myVideo);
 end
@@ -92,7 +92,11 @@ if video_flag
 end
     
 for(i = 1 : length(x1))
+    plot(x1(1,i),x1(2,i),'k');
+    hold on
     plot(x1(1,1:i),x1(2,1:i),'g');
+    hold on
+    plot(x2(1,i),x2(2,i),'k');
     hold on
     plot(x2(1,1:i),x2(2,1:i),'r');
     pause(0.0000005)
